@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    cursor: default; /* Adicionado para remover a "mãozinha" em todo o body */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.banner {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.banner img {
+    width: 100%;
+    display: block;
+    cursor: default; /* Adicionado para remover a "mãozinha" nas imagens do banner */
+}
+
+.content img {
+    width: 100%;
+    max-width: 600px; /* Limita o tamanho máximo das imagens */
+    display: block;
+    margin-bottom: 20px; /* Espaçamento entre as imagens */
+    cursor: default; /* Adicionado para remover a "mãozinha" nas imagens do conteúdo */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .content {
+        padding: 5px;
+    }
+
+    .content img {
+        max-width: 100%; /* Ajusta as imagens para a largura total da tela */
+        margin-bottom: 10px; /* Reduz o espaçamento entre as imagens */
+    }
+
+    .banner {
+        margin-bottom: 10px;
+    }
+}
