@@ -9,13 +9,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 0; /* Removemos o padding para evitar espaços em branco */
 }
 
 .banner {
     width: 100%;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 0; /* Removemos a margem inferior para evitar espaços */
 }
 
 .banner img {
@@ -25,25 +25,24 @@ body {
 }
 
 .content img {
-    width: 100%;
-    max-width: 600px; /* Limita o tamanho máximo das imagens */
+    width: 100%; /* Ocupa 100% da largura disponível */
     display: block;
-    margin-bottom: 20px; /* Espaçamento entre as imagens */
+    margin-bottom: 0; /* Removemos a margem inferior para evitar espaços */
     cursor: default; /* Adicionado para remover a "mãozinha" nas imagens do conteúdo */
 }
 
 /* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
     .content {
-        padding: 5px;
+        padding: 0; /* Garantimos que não há padding em dispositivos móveis */
     }
 
     .content img {
-        max-width: 100%; /* Ajusta as imagens para a largura total da tela */
-        margin-bottom: 10px; /* Reduz o espaçamento entre as imagens */
+        width: 100%; /* Ocupa toda a largura da tela */
+        margin-bottom: 0; /* Remove espaços entre as imagens */
     }
 
     .banner {
-        margin-bottom: 10px;
+        margin-bottom: 0; /* Remove espaços abaixo do banner */
     }
 }
