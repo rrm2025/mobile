@@ -2,47 +2,59 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    cursor: default; /* Adicionado para remover a "mãozinha" em todo o body */
+    cursor: default;
 }
 
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0; /* Removemos o padding para evitar espaços em branco */
+    padding: 0;
 }
 
 .banner {
     width: 100%;
     overflow: hidden;
-    margin-bottom: 0; /* Removemos a margem inferior para evitar espaços */
+    margin-bottom: 0;
 }
 
 .banner img {
     width: 100%;
     display: block;
-    cursor: default; /* Adicionado para remover a "mãozinha" nas imagens do banner */
+    cursor: default;
 }
 
 .content img {
-    width: 100%; /* Ocupa 100% da largura disponível */
+    width: 100%;
     display: block;
-    margin-bottom: 0; /* Removemos a margem inferior para evitar espaços */
-    cursor: default; /* Adicionado para remover a "mãozinha" nas imagens do conteúdo */
+    margin-bottom: 0;
+    cursor: default;
+}
+
+#imagemFixa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ou uma largura específica, ex: width: 300px; */
+    z-index: 100; /* Garante que a imagem fique sobre outros elementos */
 }
 
 /* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
     .content {
-        padding: 0; /* Garantimos que não há padding em dispositivos móveis */
+        padding: 0;
     }
 
     .content img {
-        width: 100%; /* Ocupa toda a largura da tela */
-        margin-bottom: 0; /* Remove espaços entre as imagens */
+        width: 100%;
+        margin-bottom: 0;
     }
 
     .banner {
-        margin-bottom: 0; /* Remove espaços abaixo do banner */
+        margin-bottom: 0;
+    }
+
+    #imagemFixa {
+        width: 100%; /* Ajuste a largura para dispositivos móveis, se necessário */
     }
 }
