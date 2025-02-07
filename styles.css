@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     cursor: default;
+    padding-top: 100px; /* Adicionado para evitar que a imagem fixa cubra o conteúdo */
 }
 
 .content {
@@ -10,25 +11,40 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 0;
+    max-width: 1200px; /* Limita a largura do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
 }
 
 .banner {
     width: 100%;
     overflow: hidden;
-    margin-bottom: 0;
+    margin-bottom: 20px; /* Adicionado um espaçamento */
 }
 
 .banner img {
     width: 100%;
     display: block;
-    cursor: default;
+    cursor: pointer; /* Altere para pointer para indicar que é clicável */
+    transition: opacity 0.3s ease; /* Efeito de transição */
+}
+
+.banner img:hover {
+    opacity: 0.9; /* Efeito de hover */
 }
 
 .content img {
     width: 100%;
     display: block;
-    margin-bottom: 0;
-    cursor: default;
+    margin-bottom: 20px; /* Adicionado um espaçamento */
+    cursor: pointer; /* Altere para pointer para indicar que é clicável */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição */
+}
+
+.content img:hover {
+    transform: scale(1.02); /* Efeito de hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
 }
 
 #imagemFixa {
@@ -37,6 +53,10 @@ body {
     left: 0;
     width: 100%; /* Ou uma largura específica, ex: width: 300px; */
     z-index: 100; /* Garante que a imagem fique sobre outros elementos */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+    padding: 10px; /* Espaçamento interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+    height: 80px; /* Altura fixa para a imagem */
 }
 
 /* Estilos para dispositivos móveis */
@@ -47,14 +67,15 @@ body {
 
     .content img {
         width: 100%;
-        margin-bottom: 0;
+        margin-bottom: 10px; /* Espaçamento menor para dispositivos móveis */
     }
 
     .banner {
-        margin-bottom: 0;
+        margin-bottom: 10px; /* Espaçamento menor para dispositivos móveis */
     }
 
     #imagemFixa {
         width: 100%; /* Ajuste a largura para dispositivos móveis, se necessário */
+        height: 60px; /* Altura menor para dispositivos móveis */
     }
 }
