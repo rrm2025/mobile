@@ -49,7 +49,7 @@ body {
 
 .menu {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 80px; /* Ajuste conforme necessário para evitar sobreposição */
     left: 50%;
     transform: translateX(-50%);
