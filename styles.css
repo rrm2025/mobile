@@ -31,12 +31,56 @@ body {
     cursor: default;
 }
 
+.image-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 #imagemFixa {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Ou uma largura específica, ex: width: 300px; */
-    z-index: 100; /* Garante que a imagem fique sobre outros elementos */
+    width: 100%;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 80px; /* Ajuste conforme necessário para evitar sobreposição */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 101;
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 5px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+.menu ul li a:hover {
+    background: #f0f0f0;
 }
 
 /* Estilos para dispositivos móveis */
@@ -56,5 +100,9 @@ body {
 
     #imagemFixa {
         width: 100%; /* Ajuste a largura para dispositivos móveis, se necessário */
+    }
+
+    .menu {
+        width: 90%; /* Ajuste para melhor visualização em telas pequenas */
     }
 }
